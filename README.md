@@ -20,7 +20,9 @@ today
 
 
 log4j2
+http://logging.apache.org/log4j/scala/dependency-management.html
 ->
+L0-先用Java project 確認讀取格式, 位置, 沒提供時的預設情況
 L1-研究下大部分spark application傾向使用哪個 log framework, 常見比較性問題, (ex: slf4j, log4j, log4j2, logback)
 L2-整理自己的安裝教學文章
 L3-simple log4j2 template (xml & properties)

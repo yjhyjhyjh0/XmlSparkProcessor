@@ -1,0 +1,4 @@
+2020-05-02 22:32:40:INFO INFO : temp.Temp {main() : Line.19} - hello info
+2020-05-02 22:32:40:WARN WARN : temp.Temp {main() : Line.20} - hello warn
+2020-05-03 16:35:55:INFO INFO : temp.Slf4jMain {main() : Line.19} - hello slf info
+2020-05-03 16:35:55:WARN WARN : temp.Slf4jMain {main() : Line.20} - hello slf warn
