@@ -46,7 +46,6 @@ object ParseUtils {
    * @param objectFieldDefinition object column base
    */
   def parseObjectFieldBase(objectFieldDefinition: String): String = {
-    // TODO separate this into more functions
     val objectFieldBase = objectFieldDefinition
       .split("\\.")
       .dropRight(1)

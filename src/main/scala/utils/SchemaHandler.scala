@@ -32,7 +32,6 @@ object SchemaHandler {
     }.toArray
       .flatten
       .toMap
-    //TODO blog save this flatten to map
 
     subColumnConfig
   }

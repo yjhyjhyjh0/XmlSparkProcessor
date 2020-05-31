@@ -3,7 +3,6 @@ Example of data transformation from XML to parquets via Spark.
 
 
 ## Usage
-
     execute Main class for demo
 
 ## Test
@@ -11,5 +10,7 @@ Example of data transformation from XML to parquets via Spark.
 
 ## Goal
 G1-XPath (XML query)
+
 G2-Custom data transformation on Apache Spark
+
 G3-Unit testing
