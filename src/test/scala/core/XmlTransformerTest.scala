@@ -1,15 +1,17 @@
 package core
 
-import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.types.{StringType, StructField, StructType}
-import utils.{Env, Logging, SchemaHandler}
+//import org.scalatest.FunSuite
+
+import org.apache.spark.sql.{Row, SparkSession}
+import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
+import org.scalatest.funsuite.AnyFunSuite
+import utils.SchemaHandler
 
 import scala.xml.XML
 
-class Processor extends Logging {
+class XmlTransformerTest extends AnyFunSuite {
 
-  def process(): Unit = {
-    val pipelineConfig = SchemaHandler.getFakePipelineConfig()
+  test("transform") {
     val session = SparkSession
       .builder()
       .appName("Name")
@@ -20,8 +22,9 @@ class Processor extends Logging {
 
     val xmlRdd = session
       .sparkContext
-      .wholeTextFiles(pipelineConfig.inputPath)
+      .wholeTextFiles("input")
       .map { case (fileName, fileContent) =>
+        println("fileName :" + fileName)
         (fileName, XML.loadString(fileContent))
       }
 
@@ -35,8 +38,13 @@ class Processor extends Logging {
           StructField("field1", StringType, true),
           StructField("field2", StringType, true))), true)))
 
+    //        val nestedObjectSchema = StructType(List(StructField("pk", StringType, true),
+    //          StructField("name", StringType, true)))
+    //    session.createDataFrame()
+
     val df = session.createDataFrame(re, nestedObjectSchema)
     df.printSchema()
     df.show(false)
+    println("here")
   }
 }

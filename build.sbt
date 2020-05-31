@@ -1,6 +1,6 @@
 name := "XmlSparkProcessor"
 
-version := "0.1"
+version := "1.0.0-SNAPSHOT"
 
 scalaVersion := "2.11.11"
 
@@ -17,5 +17,7 @@ libraryDependencies ++= Seq(
   "org.apache.logging.log4j" % "log4j-slf4j-impl" % log4j2Version,
   "org.slf4j" % "slf4j-api" % "1.7.25",
 
+  "org.scalactic" %% "scalactic" % "3.1.1",
+  "org.scalatest" %% "scalatest" % "3.1.1" % "test",
   "org.mockito" % "mockito-all" % "1.10.19" % Test
 )

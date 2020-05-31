@@ -1,19 +1,11 @@
 package core
 
-class Main {
-
-}
+import org.apache.spark.sql.{Row, SparkSession}
+import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 
 object Main {
   def main(args: Array[String]): Unit = {
-
-    println("hello");
-
-    var array: Array[Array[String]] = null
-    array = Array(Array("ABC", "123"), Array("DEF", "456"))
-
-    val result=array.flatMap(_.toList)
-
-    println("hello")
+    val processor = new Processor
+    processor.process()
   }
 }
