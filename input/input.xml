@@ -1,0 +1,15 @@
+<root>
+    <layer1>
+        <layer2>
+            <layer31>
+                <value>stringValue1</value>
+            </layer31>
+            <layer32>
+                <object>
+                    <valueOfField1>subFieldValue1</valueOfField1>
+                    <valueOfField2>subFieldValue2</valueOfField2>
+                </object>
+            </layer32>
+        </layer2>
+    </layer1>
+</root>
